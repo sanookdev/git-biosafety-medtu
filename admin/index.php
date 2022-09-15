@@ -2,6 +2,7 @@
     session_start();
     $_SESSION['user'] = 'ADMIN';
     if($_SESSION['user'] != 'ADMIN'){
+        exit();
         header('Location: ../');
     }
 ?>
@@ -46,7 +47,6 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="../picture/medlogopng.png" alt="medlogopng" height="60" width="60">
@@ -71,8 +71,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <!-- js data table  -->
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
@@ -82,6 +81,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
 
+    <!-- Bootstrap 4 -->
+    <script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Sparkline -->
     <script src="./plugins/sparklines/sparkline.js"></script>
     <!-- Summernote -->

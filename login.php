@@ -100,6 +100,12 @@
                             '</div>';
                         $('.error-message').html(outputhtml);
 
+                        if (res.data.type == '1') {
+                            window.location.href = './admin';
+                        } else {
+                            window.location.href = '#';
+                        }
+
 
                     } else {
                         outputhtml = '<div class = "alert alert-danger">' + res.data.message +
